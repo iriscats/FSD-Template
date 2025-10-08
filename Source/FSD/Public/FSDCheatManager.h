@@ -525,6 +525,9 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void C_ResetSteamAchievementStats();
     
+    UFUNCTION(BlueprintCallable, Exec, meta=(WorldContext="WorldContextObject"))
+    void C_ResetLatestAdvertisedId(UObject* WorldContextObject, const FString& AdvertisedId);
+    
     UFUNCTION(BlueprintCallable, Exec)
     void C_ResetForgingXP();
     

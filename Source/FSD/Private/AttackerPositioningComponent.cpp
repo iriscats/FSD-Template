@@ -8,7 +8,7 @@ UAttackerPositioningComponent::UAttackerPositioningComponent(const FObjectInitia
     this->FlyingFreePositions.AddDefaulted(32);
     this->CharacterPersonalSphere = 60.00f;
     this->CharacterHalfHeight = 60.00f;
-    this->CostModifier = 1.00f;
+    this->ScoreModifier = 1.00f;
 }
 
 void UAttackerPositioningComponent::UnregisterAttacker(AActor* Attacker, bool IsFlying) {

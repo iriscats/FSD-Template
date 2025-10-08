@@ -1257,6 +1257,9 @@ public:
     void ConsumeCycleItemButton();
     
 protected:
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_UseDashCharge();
+    
     UFUNCTION(BlueprintCallable, Client, Unreliable)
     void Client_TargetDamaged(UObject* Health, float Damage, float DamageModifier, bool IsWeakPoint, bool IsRadial);
     

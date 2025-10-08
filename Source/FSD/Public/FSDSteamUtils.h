@@ -36,6 +36,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool HasSupporterUpgrade();
     
+    UFUNCTION(BlueprintCallable)
+    static bool HasDLC(int32 dlcID);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool HasDeluxeEdition();
     

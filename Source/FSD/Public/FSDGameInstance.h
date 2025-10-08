@@ -241,6 +241,9 @@ public:
     bool HasSeenInfoScreen;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    bool ForceInfoScreen;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTransform CharacterSelectionViewTargetTransform;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -538,6 +541,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetFSDPassword(const FString& pw);
     
+    UFUNCTION(BlueprintCallable)
+    void SetForceInfoScreen();
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetEligableForRetirementAssignment(bool eligable);
     
@@ -564,6 +570,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ResetSaveGame();
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetForceInfoScreen();
     
     UFUNCTION(BlueprintCallable)
     void ResetAlwaysLoadedWorldsAndGameData();
@@ -656,6 +665,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TSoftClassPtr<AProceduralSetup> GetSoftReferenceToPLS();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetShouldForceInfoScreen();
     
     UFUNCTION(BlueprintCallable)
     TArray<FBlueprintSessionResult> GetServersFriendsArePlaying(TArray<FBlueprintSessionResult> servers);

@@ -149,16 +149,16 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer) 
     this->CanInstantRevive = false;
     this->HasInitializedPerks = false;
     this->CharacterVanity = CreateDefaultSubobject<UCharacterVanityComponent>(TEXT("CharacterVanity"));
+    this->ActorTracking->SetupAttachment(RootComponent);
+    this->DownCamera->SetupAttachment(RootComponent);
     this->FPMesh->SetupAttachment(FirstPersonRoot);
     this->FirstPersonCamera->SetupAttachment(FPMesh);
     this->FirstPersonRoot->SetupAttachment(RootComponent);
-    this->ActorTracking->SetupAttachment(RootComponent);
-    this->ThirdPersonSpringArm->SetupAttachment(RootComponent);
+    this->FollowCamera->SetupAttachment(FollowSpringArm);
+    this->FollowSpringArm->SetupAttachment(RootComponent);
     this->ThirdPersonCamera->SetupAttachment(ThirdPersonSpringArm);
     this->ThirdPersonLight->SetupAttachment(RootComponent);
-    this->FollowSpringArm->SetupAttachment(RootComponent);
-    this->FollowCamera->SetupAttachment(FollowSpringArm);
-    this->DownCamera->SetupAttachment(RootComponent);
+    this->ThirdPersonSpringArm->SetupAttachment(RootComponent);
     this->WidgetInteraction->SetupAttachment(FirstPersonCamera);
 }
 
@@ -667,6 +667,9 @@ void APlayerCharacter::CycleItemDown() {
 }
 
 void APlayerCharacter::ConsumeCycleItemButton() {
+}
+
+void APlayerCharacter::Client_UseDashCharge_Implementation() {
 }
 
 void APlayerCharacter::Client_TargetDamaged_Implementation(UObject* Health, float Damage, float DamageModifier, bool IsWeakPoint, bool IsRadial) {

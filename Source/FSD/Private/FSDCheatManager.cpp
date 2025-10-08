@@ -489,6 +489,9 @@ void UFSDCheatManager::C_Resupply() {
 void UFSDCheatManager::C_ResetSteamAchievementStats() {
 }
 
+void UFSDCheatManager::C_ResetLatestAdvertisedId(UObject* WorldContextObject, const FString& AdvertisedId) {
+}
+
 void UFSDCheatManager::C_ResetForgingXP() {
 }
 

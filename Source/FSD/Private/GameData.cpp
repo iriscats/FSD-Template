@@ -7,6 +7,7 @@ UGameData::UGameData() {
     this->WeaponMaintenanceSettings = NULL;
     this->PropHuntSettings = NULL;
     this->FsdEventsSettings = NULL;
+    this->DLCSettings = NULL;
     this->GameActivitySettings = NULL;
     this->DanceSettings = NULL;
     this->AnimationSettings = NULL;
@@ -47,6 +48,7 @@ UGameData::UGameData() {
     this->Achievements = NULL;
     this->MissionSetup = NULL;
     this->SeasonSettings = NULL;
+    this->InstancedNiagaraSettings = NULL;
     this->DefaultCharacterID = NULL;
     this->DefaultEditorCharacterID = NULL;
 }

@@ -33,6 +33,10 @@ bool UFSDSteamUtils::HasSupporterUpgrade() {
     return false;
 }
 
+bool UFSDSteamUtils::HasDLC(int32 dlcID) {
+    return false;
+}
+
 bool UFSDSteamUtils::HasDeluxeEdition() {
     return false;
 }

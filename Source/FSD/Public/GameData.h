@@ -45,8 +45,10 @@ class UFSDTutorialSettings;
 class UForginSettings;
 class UGameActivitySettings;
 class UGameAnimationSettings;
+class UGameDLCSettings;
 class UGlobalMissionSetup;
 class UHUDVisibilityGroup;
+class UInstancedNiagaraSettings;
 class UInventoryList;
 class UItemSettings;
 class UItemSkinSettings;
@@ -101,6 +103,9 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFSDEventCollection* FsdEventsSettings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UGameDLCSettings* DLCSettings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameActivitySettings* GameActivitySettings;
@@ -254,6 +259,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USeasonSettings* SeasonSettings;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UInstancedNiagaraSettings* InstancedNiagaraSettings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPlayerCharacterID* DefaultCharacterID;

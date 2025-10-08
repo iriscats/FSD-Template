@@ -38,7 +38,7 @@ protected:
     float CharacterHalfHeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float CostModifier;
+    float ScoreModifier;
     
 public:
     UAttackerPositioningComponent(const FObjectInitializer& ObjectInitializer);

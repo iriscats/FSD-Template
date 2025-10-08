@@ -29,6 +29,9 @@ protected:
     FString SteamName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString SteamUTMTrackingId;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString OddishID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -74,7 +77,7 @@ public:
     bool ShouldBeAnnounced(UObject* WorldContext) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
-    bool OpenStorePage(UObject* WorldContext);
+    bool OpenStorePage(UObject* WorldContext, const FString& UTMTrackingLocationId);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContext"))
     void MarkAnnounced(UObject* WorldContext);

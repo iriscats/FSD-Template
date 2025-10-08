@@ -20,6 +20,7 @@ UFSDGameInstance::UFSDGameInstance() {
     this->LoaderSequencePlaying = false;
     this->CharacterSelectionLastViewTarget = NULL;
     this->HasSeenInfoScreen = false;
+    this->ForceInfoScreen = false;
     this->DEBUGUseDebugSeedForMissions = false;
     this->DEBUGAutoRotateMissions = false;
     this->DEBUGFixedPLSSeed = -1;
@@ -141,6 +142,9 @@ void UFSDGameInstance::SetGlobalMissionSeed(int32 Seed) {
 void UFSDGameInstance::SetFSDPassword(const FString& pw) {
 }
 
+void UFSDGameInstance::SetForceInfoScreen() {
+}
+
 
 void UFSDGameInstance::SetDebugSeed(int32 Seed) {
 }
@@ -164,6 +168,9 @@ void UFSDGameInstance::ResetViewer3DClass() {
 }
 
 void UFSDGameInstance::ResetSaveGame() {
+}
+
+void UFSDGameInstance::ResetForceInfoScreen() {
 }
 
 void UFSDGameInstance::ResetAlwaysLoadedWorldsAndGameData() {
@@ -264,6 +271,10 @@ FVector2D UFSDGameInstance::GetViewportSize() {
 
 TSoftClassPtr<AProceduralSetup> UFSDGameInstance::GetSoftReferenceToPLS() {
     return NULL;
+}
+
+bool UFSDGameInstance::GetShouldForceInfoScreen() {
+    return false;
 }
 
 TArray<FBlueprintSessionResult> UFSDGameInstance::GetServersFriendsArePlaying(TArray<FBlueprintSessionResult> servers) {

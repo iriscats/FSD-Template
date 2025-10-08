@@ -225,7 +225,7 @@ protected:
     void All_SimulateDigDebris(FVector_NetQuantize Position, UFXSystemAsset* Particles, USoundCue* cue);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void All_SimulateDigBlock(FVector_NetQuantize Position, bool SpawnParticles, int32 Material, float Density, bool isSpecial);
+    void All_SimulateDigBlock(FVector_NetQuantize Position, bool spawnParticles, int32 Material, float Density, bool isSpecial);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void All_SimulateDamageTarget(UPrimitiveComponent* TargetComponent, bool isSpecial, const FVector_NetQuantize& ImpactPoint, const FVector_NetQuantizeNormal& ImpactNormal, UFSDPhysicalMaterial* PhysMaterial, uint8 BoneIndex);
